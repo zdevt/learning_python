@@ -12,4 +12,4 @@ def add_num( img ):
 
 
 if __name__ == '__main__':
-    add_num("sven.jpg" )
+    add_num("000_sven.jpg" )
