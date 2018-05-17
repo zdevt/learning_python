@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import shutil
 import requests
 
 from bs4 import BeautifulSoup
@@ -10,6 +11,7 @@ html = requests.get( url )
 soup = BeautifulSoup( html.text, 'html.parser' )
 img_urls = soup.findAll( 'img', bdwater = '杉本有美吧,1280,860' )
 
+shutil.rmtree('src013')
 os.makedirs('src013')
 
 for img_url in img_urls:
