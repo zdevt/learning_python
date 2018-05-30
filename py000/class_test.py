@@ -14,4 +14,3 @@ t = Test()
 t.prt()
 
 print "你好"
-

