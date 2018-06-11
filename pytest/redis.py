@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 #       FileName:  rds.py
@@ -7,7 +7,7 @@
 #
 #        Version:  1.0
 #        Created:  2018-05-28 09:57:03
-#  Last Modified:  2018-05-29 10:25:06
+#  Last Modified:  2018-06-11 14:09:36
 #       Revision:  none
 #       Compiler:  gcc
 #

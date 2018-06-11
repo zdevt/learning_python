@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 #       FileName:  bt.py
@@ -7,7 +7,7 @@
 #
 #        Version:  1.0
 #        Created:  2018-05-29 10:14:31
-#  Last Modified:  2018-05-29 10:18:10
+#  Last Modified:  2018-06-11 14:09:14
 #       Revision:  none
 #       Compiler:  gcc
 #

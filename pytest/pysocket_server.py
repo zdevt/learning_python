@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 #       FileName:  pysocket_server.py
@@ -7,7 +7,7 @@
 #
 #        Version:  1.0
 #        Created:  2018-05-28 10:47:13
-#  Last Modified:  2018-05-30 16:30:22
+#  Last Modified:  2018-06-11 14:09:30
 #       Revision:  none
 #       Compiler:  gcc
 #
