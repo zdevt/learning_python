@@ -6,7 +6,7 @@
 #
 #        Version:  1.0
 #        Created:  2018-06-13 09:13:12
-#  Last Modified:  2018-06-13 09:26:10
+#  Last Modified:  2018-06-26 15:11:12
 #       Revision:  none
 #       Compiler:  gcc
 #
@@ -30,7 +30,7 @@ x = linspace(0, 10, 100)
 
 fig, ax = plt.subplots()
 
-for n in xrange(4):
+for n in range(4):
     ax.plot(x, jn(n, x), label=r"$J_%d(x)$" % n)
 ax.legend()
 
