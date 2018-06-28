@@ -6,7 +6,7 @@
 #
 #        Version:  1.0
 #        Created:  2018-06-13 10:22:44
-#  Last Modified:  2018-06-13 10:30:22
+#  Last Modified:  2018-06-26 16:01:29
 #       Revision:  none
 #       Compiler:  gcc
 #
@@ -14,6 +14,7 @@
 #   Organization:
 
 import matplotlib.pyplot as plt
+
 from numpy import *
 from scipy.integrate import quad, dblquad, tplquad
 from scipy.integrate import odeint, ode
