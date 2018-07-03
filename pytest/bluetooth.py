@@ -7,7 +7,7 @@
 #
 #        Version:  1.0
 #        Created:  2018-05-29 10:14:31
-#  Last Modified:  2018-06-11 14:09:14
+#  Last Modified:  2018-06-28 15:55:53
 #       Revision:  none
 #       Compiler:  gcc
 #
@@ -23,8 +23,8 @@ def findDevs():
     foundDevs = bluetooth.discover_devices(lookup_names=True)
     for (addr, name) in foundDevs:
         if addr not in alreadyFound:
-            print '[*] Found Bluetooth Device : ' + str(name)
-            print '[+] Mac address : ' + str(addr)
+            print('[*] Found Bluetooth Device : ' + str(name))
+            print('[+] Mac address : ' + str(addr))
             alreadyFound.append(addr)
 
 
