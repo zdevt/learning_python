@@ -6,7 +6,7 @@
 #
 #        Version:  1.0
 #        Created:  2018-07-03 15:47:44
-#  Last Modified:  2018-07-03 15:56:35
+#  Last Modified:  2018-07-04 11:31:42
 #       Revision:  none
 #       Compiler:  gcc
 #
@@ -19,6 +19,7 @@ w_doors = rd.randint(0, 3, 1000)
 
 i_cnts = 0
 c_cnts = 0
+
 
 for w_door in w_doors:
     f_try = rd.randint(0, 3)
