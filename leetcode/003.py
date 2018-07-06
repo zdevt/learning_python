@@ -6,7 +6,7 @@
 #
 #        Version:  1.0
 #        Created:  2018-07-06 09:09:37
-#  Last Modified:  2018-07-06 09:32:25
+#  Last Modified:  2018-07-06 13:48:48
 #       Revision:  none
 #       Compiler:  gcc
 #
@@ -18,18 +18,17 @@ def test(s):
     res = 0
     if s is None or len(s) == 0:
         return res
+    pointer = 0
     d = {}
-    tmp = 0
-    start = 0
     for i in range(len(s)):
-        if s[i] in d and d[s[i]] >= start:
-            start = d[s[i]] + 1
-        tmp = i - start + 1
+        if s[i] in d and d[s[i]] >= pointer:
+            pointer = d[s[i]] + 1
+        temp = i - pointer + 1
         d[s[i]] = i
-        res = max(res, tmp)
+        res = max(res, temp)
     return res
 
 
-print(test("abba"))
+# print(test("abba"))
 print(test("abbscac"))
-print(test("pwwkew"))
+# print(test("pwwkew"))
