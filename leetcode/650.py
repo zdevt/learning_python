@@ -6,7 +6,7 @@
 #
 #        Version:  1.0
 #        Created:  2018-07-17 14:19:30
-#  Last Modified:  2018-07-18 08:33:21
+#  Last Modified:  2018-07-18 08:50:57
 #       Revision:  none
 #       Compiler:  gcc
 #
@@ -21,21 +21,16 @@ def MinSteps(n):
     if 2 <= n <= 3:
         return n
 
-    l = []
-    for i in range(1, n // 2):
+    (x,y)=(1,n)
+    for i in range(2, n // 2):
         v = n / i
         if v.is_integer():
-            l.append((i, int(v)))
+            (x,y)=(i,int(v))
+            break
 
-    l.sort(key=lambda e: e[0] + e[1])
-    (x, y) = l[0]
-    minv = min(x,y)
-    maxv = max(x,y)
-    print(l)
-
-    if minv == 1:
-        return maxv
+    if x == 1:
+        return y
 
     return MinSteps(x) + MinSteps(y)
 
-print(MinSteps(182))
+print(MinSteps(188))
