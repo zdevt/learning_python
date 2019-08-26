@@ -6,12 +6,24 @@
 #
 #        Version:  1.0
 #        Created:  2018-07-17 14:19:30
-#  Last Modified:  2018-07-18 08:50:57
+#  Last Modified:  2018-07-18 11:38:14
 #       Revision:  none
 #       Compiler:  gcc
 #
 #         Author:  zt ()
 #   Organization:
+
+
+def MinSteps2(n):
+    i = 2
+    temp = 0
+    while i <= n:
+        if n % i == 0:
+            temp += i
+            n = n / i
+        else:
+            i += 1
+    return temp
 
 
 def MinSteps(n):
@@ -21,11 +33,11 @@ def MinSteps(n):
     if 2 <= n <= 3:
         return n
 
-    (x,y)=(1,n)
+    (x, y) = (1, n)
     for i in range(2, n // 2):
         v = n / i
         if v.is_integer():
-            (x,y)=(i,int(v))
+            (x, y) = (i, int(v))
             break
 
     if x == 1:
@@ -33,4 +45,5 @@ def MinSteps(n):
 
     return MinSteps(x) + MinSteps(y)
 
-print(MinSteps(188))
+
+print(MinSteps2(18))
