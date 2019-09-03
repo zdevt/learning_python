@@ -16,7 +16,7 @@ shutil.rmtree('013_pic')
 os.makedirs('013_pic')
 
 for img_url in img_urls:
-    print (img_url)
+    print(img_url)
     img_src = img_url['src']
     os.path.split(img_src)[1]
     with open('013_pic/' + os.path.split(img_src)[1], 'wb') as f:
