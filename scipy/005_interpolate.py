@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-#-*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 #       FileName:  005_interpolate.py
 #
 #    Description:
 #
 #        Version:  1.0
 #        Created:  2018-06-13 11:05:00
-#  Last Modified:  2018-06-13 11:13:19
+#  Last Modified:  2019-09-03 10:50:53
 #       Revision:  none
 #       Compiler:  gcc
 #
@@ -15,29 +15,24 @@
 
 import matplotlib.pyplot as plt
 
-from numpy import *
-from numpy.fft import fftfreq
+import numpy as np
 
-from scipy.integrate import quad, dblquad, tplquad
-from scipy.integrate import odeint, ode
-from scipy.special import jn, yn, jn_zeros, yn_zeros
-from scipy.fftpack import *
-from scipy.interpolate import *
+import scipy.interpolate as scin
 
 
 def f(x):
-    return sin(x)
+    return np.sin(x)
 
 
-n = arange(0, 10)
-x = linspace(0, 9, 100)
-y_meas = f(n) + 0.1 * random.randn(len(n))
+n = np.arange(0, 10)
+x = np.linspace(0, 9, 100)
+y_meas = f(n) + 0.1 * np.random.randn(len(n))
 y_real = f(x)
 
-linear_interpolation = interp1d(n, y_meas)
+linear_interpolation = scin.interp1d(n, y_meas)
 y_interp1 = linear_interpolation(x)
 
-cublic_interpolation = interp1d(n, y_meas, kind='cubic')
+cublic_interpolation = scin.interp1d(n, y_meas, kind='cubic')
 y_interp2 = cublic_interpolation(x)
 
 fig, ax = plt.subplots(figsize=(10, 4))

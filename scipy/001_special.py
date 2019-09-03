@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-#-*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 #       FileName:  001_special.py
 #
 #    Description:
 #
 #        Version:  1.0
 #        Created:  2018-06-13 09:13:12
-#  Last Modified:  2018-06-26 15:11:12
+#  Last Modified:  2019-09-03 10:40:43
 #       Revision:  none
 #       Compiler:  gcc
 #
@@ -15,8 +15,8 @@
 
 import matplotlib.pyplot as plt
 
-from numpy import *
-from scipy.special import jn, yn, jn_zeros, yn_zeros
+import numpy as np
+from scipy.special import jn, yn, jn_zeros
 
 n = 0
 x = 0.0
@@ -26,7 +26,7 @@ print("J_%d(%f)=%f" % (n, x, jn(n, x)))
 x = 1.0
 print("Y_%d(%f)=%f" % (n, x, yn(n, x)))
 
-x = linspace(0, 10, 100)
+x = np.linspace(0, 10, 100)
 
 fig, ax = plt.subplots()
 

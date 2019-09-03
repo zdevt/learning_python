@@ -1,21 +1,21 @@
 #!/usr/bin/env python
-#-*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 #       FileName:  002_integrate.py
 #
 #    Description:
 #
 #        Version:  1.0
 #        Created:  2018-06-13 09:26:33
-#  Last Modified:  2018-06-13 10:22:12
+#  Last Modified:  2019-09-03 10:39:24
 #       Revision:  none
 #       Compiler:  gcc
 #
 #         Author:  zt ()
 #   Organization:
 
-from numpy import *
-from scipy.integrate import quad, dblquad, tplquad
-from scipy.special import jn, yn, jn_zeros, yn_zeros
+import numpy as np
+from scipy.integrate import quad, dblquad
+from scipy.special import jn
 
 
 def f(x):
@@ -40,15 +40,15 @@ x_upper = 10
 val, abserr = quad(integrand, x_lower, x_upper, args=(3, ))
 print("integral value=", val, ",absolute error=", abserr)
 
-val, abserr = quad(lambda x: exp(-x**2), -Inf, Inf)
+val, abserr = quad(lambda x: np.exp(-x**2), -np.Inf, np.Inf)
 print("integral value=", val, ",absolute error=", abserr)
 
-analytical = sqrt(pi)
+analytical = np.sqrt(np.pi)
 print("analytical=", analytical)
 
 
 def integrand(x, y):
-    return exp(-x**2 - y**2)
+    return np.exp(-x**2 - y**2)
 
 
 x_lower = 0

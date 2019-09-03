@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-#-*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 #       FileName:  003_02_ode.py
 #
 #    Description:
 #
 #        Version:  1.0
 #        Created:  2018-06-13 10:22:44
-#  Last Modified:  2018-06-26 16:01:29
+#  Last Modified:  2019-09-03 10:42:11
 #       Revision:  none
 #       Compiler:  gcc
 #
@@ -15,10 +15,8 @@
 
 import matplotlib.pyplot as plt
 
-from numpy import *
-from scipy.integrate import quad, dblquad, tplquad
-from scipy.integrate import odeint, ode
-from scipy.special import jn, yn, jn_zeros, yn_zeros
+import numpy as np
+from scipy.integrate import odeint
 
 
 def dy(y, t, zeta, w0):
@@ -29,8 +27,8 @@ def dy(y, t, zeta, w0):
 
 
 y0 = [1.0, 0.0]
-t = linspace(0, 10, 1000)
-w0 = 2 * pi * 1.0
+t = np.linspace(0, 10, 1000)
+w0 = 2 * np.pi * 1.0
 
 y1 = odeint(dy, y0, t, args=(0.0, w0))
 y2 = odeint(dy, y0, t, args=(0.2, w0))

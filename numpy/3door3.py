@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-#-*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 #       FileName:  3door3.py
 #
 #    Description:
 #
 #        Version:  1.0
 #        Created:  2018-07-03 15:47:44
-#  Last Modified:  2018-07-04 11:31:42
+#  Last Modified:  2019-09-03 11:02:44
 #       Revision:  none
 #       Compiler:  gcc
 #
