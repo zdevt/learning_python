@@ -7,7 +7,7 @@
 #
 #        Version:  1.0
 #        Created:  2018-05-28 09:57:03
-#  Last Modified:  2018-06-11 14:09:36
+#  Last Modified:  2019-09-03 23:15:15
 #       Revision:  none
 #       Compiler:  gcc
 #
@@ -16,8 +16,7 @@
 
 import redis
 
-r = redis.Redis('192.168.18.88', 16379)
-r.set('apple', 'ab')
+r = redis.Redis(host='127.0.0.1', port=6379)
+r.set('apple', 'cccccab')
 
-print r.get('apple')
-
+print(r.get('apple'))
